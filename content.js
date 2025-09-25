@@ -60,86 +60,85 @@ function CheckConfigs() {
     elementsToCheck = result.DIEMONIC_ADS_BLOCK_elementsToCheck;
     banWords = result.DIEMONIC_ADS_BLOCK_banWords;
     stopWords = result.DIEMONIC_ADS_BLOCK_stopWords;
-  });
 
-  //#region Default values
+    //#region Default values
 
-  if (elementsToDelete == null || elementsToDelete == undefined) {
-    chrome.storage.local.set({
-      "DIEMONIC_ADS_BLOCK_elementsToDelete": `
-        [
-        ".JustifierRowLayout-Incut", 
-        ".banner-view",
-        "[class*='Card_bottomAdv']", 
-        "[class*='DirectFeature']",
-        "[class*='AdvMastHead']",
-        "[id*='advRsyaReact']", 
-        "[class*='AppForecastMoney']", 
-        "[class*='topBlockWithMoney']", 
-        "[class*='AppMoneySidebar']", 
-        "[class*='AppMoney_wrap']"
-    ]
-    `
-    });
-  }
-
-  if (elementsToCheck == null || elementsToCheck == undefined) {
-
-    chrome.storage.local.set({
-      "DIEMONIC_ADS_BLOCK_elementsToCheck": ` [ "[class*='serp-item_card']" ] `
-    });
-  }
-
-  if (banWords == null || banWords == undefined) {
-    chrome.storage.local.set({
-      "DIEMONIC_ADS_BLOCK_banWords": `[ "practicum.yandex.ru", "skillfactory.ru", "AdvLabel-Text"]`
-    });
-  }
-
-  if (stopWords == null || stopWords == undefined) {
-    chrome.storage.local.set({
-      "DIEMONIC_ADS_BLOCK_stopWords": `[ "neuro_answer", "нейро", "futuris_search"]`
-    });
-  }
-
-
-  //#endregion
-
-  if (window.elementsToDelete == null || window.elementsToDelete == undefined) {
-    chrome.storage.local.get(['DIEMONIC_ADS_BLOCK_elementsToDelete'], (result) => {
-      window.elementsToDelete = result.DIEMONIC_ADS_BLOCK_elementsToDelete;
-    });
-  }
-
-  if (window.elementsToCheck == null || window.elementsToCheck == undefined) {
-    chrome.storage.local.get(['DIEMONIC_ADS_BLOCK_elementsToCheck'], (result) => {
-      window.elementsToCheck = result.DIEMONIC_ADS_BLOCK_elementsToCheck;
-    });
-  }
-
-  if (window.banWords == null || window.banWords == undefined) {
-    chrome.storage.local.get(['DIEMONIC_ADS_BLOCK_banWords'], (result) => {
-      window.banWords = result.DIEMONIC_ADS_BLOCK_banWords;
-    });
-  }
-
-  if (window.stopWords == null || window.stopWords == undefined) {
-    chrome.storage.local.get(['DIEMONIC_ADS_BLOCK_stopWords'], (result) => {
-      window.stopWords = result.DIEMONIC_ADS_BLOCK_stopWords;
-    });
-  }
-
-  chrome.storage.local.get(['DIEMONIC_ADS_BLOCK_last_time_update_configs'], (result) => {
-    window.DIEMONIC_ADS_BLOCK_last_time_update_configs = result.DIEMONIC_ADS_BLOCK_last_time_update_configs;
-
-    if (window.DIEMONIC_ADS_BLOCK_last_time_update_configs == null
-      || window.DIEMONIC_ADS_BLOCK_last_time_update_configs == undefined
-      || window.DIEMONIC_ADS_BLOCK_last_time_update_configs == "null") {
-      DownloadConfigs();
+    if (elementsToDelete == null || elementsToDelete == undefined) {
+      chrome.storage.local.set({
+        "DIEMONIC_ADS_BLOCK_elementsToDelete": `
+          [
+          ".JustifierRowLayout-Incut", 
+          ".banner-view",
+          "[class*='Card_bottomAdv']", 
+          "[class*='DirectFeature']",
+          "[class*='AdvMastHead']",
+          "[id*='advRsyaReact']", 
+          "[class*='AppForecastMoney']", 
+          "[class*='topBlockWithMoney']", 
+          "[class*='AppMoneySidebar']", 
+          "[class*='AppMoney_wrap']"
+      ]
+      `
+      });
     }
-    else if (isDiffInMinutes(new Date(window.DIEMONIC_ADS_BLOCK_last_time_update_configs), new Date(), 180)) {
-      DownloadConfigs();
+
+    if (elementsToCheck == null || elementsToCheck == undefined) {
+
+      chrome.storage.local.set({
+        "DIEMONIC_ADS_BLOCK_elementsToCheck": ` [ "[class*='serp-item_card']" ] `
+      });
     }
+
+    if (banWords == null || banWords == undefined) {
+      chrome.storage.local.set({
+        "DIEMONIC_ADS_BLOCK_banWords": `[ "practicum.yandex.ru", "skillfactory.ru", "AdvLabel-Text"]`
+      });
+    }
+
+    if (stopWords == null || stopWords == undefined) {
+      chrome.storage.local.set({
+        "DIEMONIC_ADS_BLOCK_stopWords": `[ "neuro_answer", "нейро", "futuris_search"]`
+      });
+    }
+
+    //#endregion
+
+    if (window.elementsToDelete == null || window.elementsToDelete == undefined) {
+      chrome.storage.local.get(['DIEMONIC_ADS_BLOCK_elementsToDelete'], (result) => {
+        window.elementsToDelete = result.DIEMONIC_ADS_BLOCK_elementsToDelete;
+      });
+    }
+
+    if (window.elementsToCheck == null || window.elementsToCheck == undefined) {
+      chrome.storage.local.get(['DIEMONIC_ADS_BLOCK_elementsToCheck'], (result) => {
+        window.elementsToCheck = result.DIEMONIC_ADS_BLOCK_elementsToCheck;
+      });
+    }
+
+    if (window.banWords == null || window.banWords == undefined) {
+      chrome.storage.local.get(['DIEMONIC_ADS_BLOCK_banWords'], (result) => {
+        window.banWords = result.DIEMONIC_ADS_BLOCK_banWords;
+      });
+    }
+
+    if (window.stopWords == null || window.stopWords == undefined) {
+      chrome.storage.local.get(['DIEMONIC_ADS_BLOCK_stopWords'], (result) => {
+        window.stopWords = result.DIEMONIC_ADS_BLOCK_stopWords;
+      });
+    }
+
+    chrome.storage.local.get(['DIEMONIC_ADS_BLOCK_last_time_update_configs'], (result) => {
+      window.DIEMONIC_ADS_BLOCK_last_time_update_configs = result.DIEMONIC_ADS_BLOCK_last_time_update_configs;
+
+      if (window.DIEMONIC_ADS_BLOCK_last_time_update_configs == null
+        || window.DIEMONIC_ADS_BLOCK_last_time_update_configs == undefined
+        || window.DIEMONIC_ADS_BLOCK_last_time_update_configs == "null") {
+        DownloadConfigs();
+      }
+      else if (isDiffInMinutes(new Date(window.DIEMONIC_ADS_BLOCK_last_time_update_configs), new Date(), 180)) {
+        DownloadConfigs();
+      }
+    });
   });
 
 }
@@ -172,7 +171,7 @@ function tryDeleteAds() {
       if (!stopWords.some(word => DeletedObject.includes(word.toLowerCase()))) {
         // проверка: содержит ли текст хотя бы одно из слов (как подстроку)
         if (banWords.some(word => DeletedObject.includes(word.toLowerCase()))) {
-          console.log({ DeletedObject });
+          console.log("%c🚫[DIEMONIC ADS BLOCK] Удален элемент " + DeletedObject, 'background: #464646b9; color: #ff459cff');
           el.remove();
         }
       }

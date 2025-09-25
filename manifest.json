@@ -1,9 +1,16 @@
 {
-   "content_scripts": [ {
-      "all_frames": true,
-      "js": [ "content.js" ],
-      "matches": [ "https://yandex.ru/search/*", "https://yandex.ru/video/search?*", "https://yandex.ru/images/search?*", "https://yandex.ru/maps/*", "https://yandex.ru/pogoda/*", "https://yandex.ru/*" ]
-   } ],
+   "content_scripts": [ 
+      {
+         "all_frames": true,
+         "js": [ "content.js" ],
+         "matches": [ "https://yandex.ru/search/*", "https://yandex.ru/video/search?*", "https://yandex.ru/images/search?*", "https://yandex.ru/maps/*", "https://yandex.ru/pogoda/*", "https://yandex.ru/*" ]
+      }, 
+      {
+         "matches": [ "https://mail.yandex.ru/*"],
+         "js": [ "jquery-3.5.1.min.js", "mail_ads.js"],
+         "run_at": "document_end"
+      }
+   ],
    "description": "Кастомный адблокер",
    "host_permissions": [ "https://yandex.ru" ],
    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0z1ybSfPXUNbOMpAzRpEbRA6N5Su5LieuzB2ajVtb7UbYlHWzlmAieckz+dFa5FdzOsK8UthhLlIKkH0ibx3CsecFta1q6oPILboKYYa8e8pt5hWbB6bpHwbu8/4n7QrfqI5X43dOt6GRn0VnobRcC3CF4P/hz2d+UFQTVoZVJfk67ayEzeDyx1gEubJGi11T2HXrIK2duXvNF7V2HOxLLf6+3jzfFgBq5tQ0yZ2Q41G+2KvUO8TZU7aumbYW5fwbKMIpDGBjLAtT5f3jOA8lCP4rm0stAhAg4Gu9zDYmJIWZEA88A1pVdr8mTp27l1aEfAqbzp+DZUI/tT7aLqUZQIDAQAB",
