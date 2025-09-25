@@ -1,4 +1,4 @@
-#Как установить
+## Как установить
 
 1) Скачайте архив репозиториия либо по кнопке сверху, либо по ссылке ниже
 [http://github.com/diemonic1/DIEMONIC_ADS_BLOCK/heads/main.zip](https://github.com/diemonic1/DIEMONIC_ADS_BLOCK/archive/refs/heads/main.zip)
