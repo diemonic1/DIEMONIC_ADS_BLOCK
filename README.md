@@ -1,7 +1,7 @@
 ## Как установить
 
 1) Скачайте архив репозиториия либо по кнопке сверху, либо по ссылке ниже
-[http://github.com/diemonic1/DIEMONIC_ADS_BLOCK/heads/main.zip](https://github.com/diemonic1/DIEMONIC_ADS_BLOCK/archive/refs/heads/main.zip)
+[https://github.com/diemonic1/DIEMONIC_ADS_BLOCK/archive/refs/heads/main.zip](https://github.com/diemonic1/DIEMONIC_ADS_BLOCK/archive/refs/heads/main.zip)
 
 2) Извлеките папку из архива в любое удобное место. Например, к другим программам, установленным на вашем компьютере.
 
