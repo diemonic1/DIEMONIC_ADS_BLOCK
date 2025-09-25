@@ -1,0 +1,27 @@
+{
+    "elementsToDelete": [
+        ".JustifierRowLayout-Incut", 
+        ".banner-view",
+        "[class*='Card_bottomAdv']", 
+        "[class*='DirectFeature']",
+        "[class*='AdvMastHead']",
+        "[id*='advRsyaReact']", 
+        "[class*='AppForecastMoney']", 
+        "[class*='topBlockWithMoney']", 
+        "[class*='AppMoneySidebar']", 
+        "[class*='AppMoney_wrap']"
+    ],
+    "elementsToCheck": [
+        "[class*='serp-item_card']"
+    ],
+    "banWords": [
+        "practicum.yandex.ru", 
+        "skillfactory.ru", 
+        "AdvLabel-Text"
+    ],
+    "stopWords": [
+        "neuro_answer", 
+        "нейро", 
+        "futuris_search"
+    ]
+}

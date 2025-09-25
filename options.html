@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIEMONIC ADS BLOCK SETTINGS</title>
+</head>
+<body>
+    <script src="options.js"></script>
+    <h2>Удалить конфиги. В них хранится, как удалять рекламу. 
+        После удаления они принудительно обновятся, когда вы попадете на страницу, на которой блокируется реклама.</h2>
+    <button id="DIEMONIC_ADS_BLOCK_resetBtn">Удалить конфиги</button>
+
+    <h2>elementsToDelete</h2>
+    <p>Эти элементы удаляются сразу</p>
+    <div id="DIEMONIC_ADS_BLOCK_elementsToDelete"></div>
+    <h2>elementsToCheck</h2>
+    <p>Эти элементы проверяется. Если в них содержатся banWords, они удаляются</p>
+    <div id="DIEMONIC_ADS_BLOCK_elementsToCheck"></div>
+    <h2>banWords</h2>
+    <div id="DIEMONIC_ADS_BLOCK_banWords"></div>
+    <h2>stopWords</h2>
+    <p>Если elementsToCheck содержат stopWords, они не удаляются</p>
+    <div id="DIEMONIC_ADS_BLOCK_stopWords"></div>
+    <br><br><br>
+    <div id="DIEMONIC_ADS_BLOCK_latUpdateTime"></div>
+</body>
+</html>
