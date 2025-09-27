@@ -3,10 +3,7 @@
       {
          "all_frames": true,
          "js": [ "content.js" ],
-         "matches": [ 
-            "https://yandex.ru/*", "https://www.kinopoisk.ru/*", 
-            "https://kinopoisk.ru/*", "https://afisha.yandex.ru/*", "https://auto.ru/*" 
-         ]
+         "matches": ["<all_urls>"]
       }, 
       {
          "matches": [ "https://mail.yandex.ru/*"],
