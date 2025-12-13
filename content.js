@@ -159,7 +159,7 @@ function tryDeleteAds() {
 
   elementsToDelete.forEach(element => {
     document.querySelectorAll(element).forEach(el => {
-      console.log("%c🚫[DIEMONIC ADS BLOCK] По правилу {" + element + "} удален элемент " + el, 'background: #464646b9; color: #ff459cff');
+      console.log("%c🚫[DIEMONIC ADS BLOCK] По правилу совпадения {" + element + "} удален элемент " + el, 'background: #464646b9; color: #ff459cff');
       el.remove();
     });
   });
@@ -171,7 +171,7 @@ function tryDeleteAds() {
       if (!stopWords.some(word => DeletedObject.includes(word.toLowerCase()))) {
         // проверка: содержит ли текст хотя бы одно из слов (как подстроку)
         if (banWords.some(word => DeletedObject.includes(word.toLowerCase()))) {
-          console.log("%c🚫[DIEMONIC ADS BLOCK] По правилу {" + element + "} удален элемент " + DeletedObject, 'background: #464646b9; color: #ff459cff');
+          console.log("%c🚫[DIEMONIC ADS BLOCK] По правилу поиска {" + element + "} удален элемент " + DeletedObject, 'background: #464646b9; color: #ff459cff');
           el.remove();
         }
       }
